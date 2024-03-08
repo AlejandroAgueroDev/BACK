@@ -15,10 +15,10 @@ const getGenres=async(req, res)=>{
     })
     
     //?Solo lo voy a necesitar una vez para cargar los datos de los genres
-    await Genre.bulkCreate(genresApi) 
+    // await Genre.bulkCreate(genresApi) 
     
     const genres=await Genre.findAll()
-    
+
 
     res.json(genres)
 
