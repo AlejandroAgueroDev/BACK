@@ -23,6 +23,7 @@ const getVideogameById=async(req, res)=>{
         description_raw: videogame.description_raw,
         genres: videogame.Genres.map(genre=>genre.name).join(', '),
         rating: videogame.rating,
+        isFromDatabase: true,
       }
       
       res.json(BD_Format)
