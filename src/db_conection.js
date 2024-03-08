@@ -4,10 +4,10 @@ const GenreModel=require('./models/Genre')
 const { Sequelize } = require('sequelize');
 
 const {
-  DB_USER, DB_PASSWORD, DB_HOST, PORT, BDD
+  DB_DEPLOY
 } = process.env;
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${PORT}/${BDD}`, {
+const sequelize = new Sequelize(DB_DEPLOY, {
   logging: false, 
   native: false,
 });
