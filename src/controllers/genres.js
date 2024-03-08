@@ -18,6 +18,7 @@ const getGenres=async(req, res)=>{
     await Genre.bulkCreate(genresApi) 
     
     const genres=await Genre.findAll()
+    
 
     res.json(genres)
 
