@@ -19,7 +19,6 @@ const getGenres=async(req, res)=>{
     
     const genres=await Genre.findAll()
 
-
     res.json(genres)
 
   }catch(error){
